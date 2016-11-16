@@ -8,4 +8,5 @@ import (
 
 func init() {
 	beego.Router("/appService/forceUpdate", &controller.AppForceUpdateService{})
+	beego.Router("/appService/getPatchVersion", &controller.AppPatchService{})
 }

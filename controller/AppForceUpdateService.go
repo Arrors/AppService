@@ -12,7 +12,7 @@ type AppForceUpdateService struct {
 }
 
 // Get 强制更新服务
-func (controller *AppForceUpdateService) Get() {
+func (service *AppForceUpdateService) Get() {
 
 	info := &model.AppInfo{
 		LatestVersion:     "2.0.0",
@@ -22,7 +22,7 @@ func (controller *AppForceUpdateService) Get() {
 		PromptActionTitle: "确定",
 	}
 
-	controller.Data["json"] = info
+	service.Data["json"] = info
 
-	controller.ServeJSON()
+	service.ServeJSON()
 }

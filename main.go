@@ -7,5 +7,6 @@ import (
 )
 
 func main() {
+	beego.SetStaticPath("appService", "./static/js/ios")
 	beego.Run()
 }
